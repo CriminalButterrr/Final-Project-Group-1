@@ -15,7 +15,6 @@
                             <tr>
                                 <th scope="col" class=" px-6 py-4">#</th>
                                 <th scope="col" class=" px-6 py-4">Name</th>
-                                <th scope="col" class=" px-6 py-4">Description</th>
                                 <th scope="col" class=" px-6 py-4">SKU</th>
                                 <th scope="col" class=" px-6 py-4">Quantity</th>
                                 <th scope="col" class=" px-6 py-4">Price</th>
@@ -26,7 +25,6 @@
                                     <tr class="border-b border-neutral-200 dark:border-white/10">
                                         <td class="whitespace-nowrap  px-6 py-4 font-medium">{{$product->id}}</td>
                                         <td class="whitespace-nowrap  px-6 py-4"><a href="products/{{$product->id}}">{{$product->name}}</a></td>
-                                        <td class="whitespace-nowrap  px-6 py-4">{{$product->description}}</td>
                                         <td class="whitespace-nowrap  px-6 py-4">{{$product->sku}}</td>
                                         <td class="whitespace-nowrap  px-6 py-4">{{$product->quantity}}</td>
                                         <td class="whitespace-nowrap  px-6 py-4">{{$product->price}}</td>
@@ -40,4 +38,5 @@
             </div>
         </div>
     </div>
+    
 </x-app-layout>
