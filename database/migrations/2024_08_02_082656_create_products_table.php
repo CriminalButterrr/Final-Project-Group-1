@@ -21,7 +21,6 @@ return new class extends Migration
             $table-> string('image')->nullable();
             $table-> timestamps();
             
-
             $table->foreignId('supplier_id')
                 ->constrained(table: 'supplier')
                 ->cascadeOnDelete()
