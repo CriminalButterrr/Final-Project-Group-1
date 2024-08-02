@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\ProductsController;
 use App\Http\Controllers\ProfileController;
+use App\Http\Controllers\SuppliersController;
 use Illuminate\Support\Facades\Route;
 
 Route::get('/', function () {
@@ -21,4 +22,6 @@ Route::middleware('auth')->group(function () {
 Route::get('/products', [ProductsController::class, 'index'])->name('products');
 Route::get('/products/{id}', [ProductsController::class, 'show']);
 
+Route::get('/suppliers', [SuppliersController::class, 'index'])->name('suppliers');
+Route::get('/suppliers/{id}', [SuppliersController::class, 'show']);
 require __DIR__.'/auth.php';

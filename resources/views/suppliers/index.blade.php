@@ -1,7 +1,7 @@
 <x-app-layout>
     <x-slot name="header">
         <h2 class="font-semibold text-xl text-gray-800 dark:text-gray-200 leading-tight">
-            {{ __('Products') }}
+            {{ __('Suppliers') }}
         </h2>
     </x-slot>
 
@@ -13,20 +13,18 @@
                     <tr>
                         <th scope="col" class=" px-6 py-4">#</th>
                         <th scope="col" class=" px-6 py-4">Name</th>
-                        <th scope="col" class=" px-6 py-4">SKU</th>
-                        <th scope="col" class=" px-6 py-4">Quantity</th>
-                        <th scope="col" class=" px-6 py-4">Price</th>
-                        <th scope="col" class=" px-6 py-4">Supplier ID</th>
+                        <th scope="col" class=" px-6 py-4">Email</th>
+                        <th scope="col" class=" px-6 py-4">Phone Number</th>
+                        <th scope="col" class=" px-6 py-4">Address</th>
                     </tr>
                     <tbody>
-                        @foreach ($products as $product)
+                        @foreach ($suppliers as $supplier)
                             <tr class="border-b border-neutral-200 dark:border-white/10">
-                                <td class="whitespace-nowrap  px-6 py-4 font-medium">{{$product->id}}</td>
-                                <td class="whitespace-nowrap  px-6 py-4"><a href="products/{{$product->id}}">{{$product->name}}</a></td>
-                                <td class="whitespace-nowrap  px-6 py-4">{{$product->sku}}</td>
-                                <td class="whitespace-nowrap  px-6 py-4">{{$product->quantity}}</td>
-                                <td class="whitespace-nowrap  px-6 py-4">{{$product->price}}</td>
-                                <td class="whitespace-nowrap  px-6 py-4">{{$product->supplier_id}}</td>
+                                <td class="whitespace-nowrap  px-6 py-4 font-medium">{{$supplier->id}}</td>
+                                <td class="whitespace-nowrap  px-6 py-4"><a href="suppliers/{{$supplier->id}}">{{$supplier->name}}</a></td>
+                                <td class="whitespace-nowrap  px-6 py-4">{{$supplier->email}}</td>
+                                <td class="whitespace-nowrap  px-6 py-4">{{$supplier->phone}}</td>
+                                <td class="whitespace-nowrap  px-6 py-4">{{$supplier->address}}</td>
                             </tr>
                         @endforeach
                     </tbody>
