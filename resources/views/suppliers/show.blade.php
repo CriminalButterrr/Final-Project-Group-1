@@ -18,13 +18,13 @@
                                 </div>
               
                                 <div>
-                                    <h2 class="text-2xl font-bold text-gray-800">{{$suppliers->name}}</h2>
+                                    <h2 class="text-2xl font-bold text-gray-800">{{$supplier->name}}</h2>
 
                                     <div class="mt-8">
                                         <ul class="space-y-3 list-none mt-4 text-sm text-gray-800">
-                                            <li class="text-gray-800 text-xl font-bold">E   mail: {{$suppliers->email}}</li>
-                                            <li class="text-gray-800 text-xl font-bold">Phone Number: {{$suppliers->phone}}</li>
-                                            <li class="text-gray-800 text-xl font-bold">Address: {{$suppliers->address}}</li>
+                                            <li class="text-gray-800 text-xl font-bold">Email: {{$supplier->email}}</li>
+                                            <li class="text-gray-800 text-xl font-bold">Phone Number: {{$supplier->phone}}</li>
+                                            <li class="text-gray-800 text-xl font-bold">Address: {{$supplier->address}}</li>
                                         </ul>
                                     </div>
                                 </div>
