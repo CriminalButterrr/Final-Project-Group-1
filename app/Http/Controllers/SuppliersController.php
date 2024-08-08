@@ -18,4 +18,18 @@ class SuppliersController extends Controller
 
         return view('suppliers.show', ['suppliers'=>$suppliers]);
     }
+    public function create() {
+        return view('suppliers.create');
+    }
+    public function store(Request $request){
+        $validatedData = $request->validate([
+            'name' => 'required|string|max:255',
+            'email' => 'required|email|unique:suppliers,email',
+            'phone' => 'nullable|string|max:20',
+            'address' => 'nullable|string|max:500',
+        ]);
+        Supplier::create($validatedData);
+
+        return redirect()->route('suppliers');
+    }
 }

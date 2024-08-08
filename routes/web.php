@@ -20,8 +20,11 @@ Route::middleware('auth')->group(function () {
 });
 
 Route::get('/products', [ProductsController::class, 'index'])->name('products');
+Route::get('/products/create', [ProductsController::class, 'create'])->name('products.create');
 Route::get('/products/{id}', [ProductsController::class, 'show']);
 
 Route::get('/suppliers', [SuppliersController::class, 'index'])->name('suppliers');
+Route::get('suppliers/create', [SuppliersController::class, 'create'])->name('suppliers.create');
+Route::post('/suppliers', [SuppliersController::class, 'store']);
 Route::get('/suppliers/{id}', [SuppliersController::class, 'show']);
 require __DIR__.'/auth.php';
