@@ -21,6 +21,7 @@ Route::middleware('auth')->group(function () {
 
 Route::get('/products', [ProductsController::class, 'index'])->name('products');
 Route::get('/products/create', [ProductsController::class, 'create'])->name('products.create');
+Route::post('/products', [ProductsController::class, 'store']);
 Route::get('/products/{id}', [ProductsController::class, 'show']);
 
 Route::get('/suppliers', [SuppliersController::class, 'index'])->name('suppliers');
