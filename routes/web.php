@@ -25,6 +25,7 @@ Route::post('/products', [ProductsController::class, 'store'])->name('products.s
 Route::get('/products/{id}', [ProductsController::class, 'show'])->name('products.show');
 Route::get('/products/{id}/edit', [ProductsController::class, 'edit'])->name('products.edit');
 Route::patch('/products/{id}', [ProductsController::class, 'update'])->name('products.update');
+Route::delete('products/{id}', [ProductsController::class, 'destroy'])->name('products.destroy');
 
 Route::get('/suppliers', [SuppliersController::class, 'index'])->name('suppliers.index');
 Route::get('suppliers/create', [SuppliersController::class, 'create'])->name('suppliers.create');
@@ -32,4 +33,5 @@ Route::post('/suppliers', [SuppliersController::class, 'store'])->name('supplier
 Route::get('/suppliers/{id}', [SuppliersController::class, 'show'])->name('suppliers.show');
 Route::get('/suppliers/{id}/edit', [SuppliersController::class, 'edit'])->name('suppliers.edit');
 Route::patch('/suppliers/{id}', [SuppliersController::class, 'update'])->name('suppliers.update');
+Route::delete('suppliers/{id}', [SuppliersController::class, 'destroy'])->name('suppliers.destroy');
 require __DIR__.'/auth.php';

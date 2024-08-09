@@ -60,4 +60,10 @@ class SuppliersController extends Controller
 
         return redirect()->route('suppliers.show', $id);
     }
+
+    public function destroy(Request $request, $id){
+        $supplier = Supplier::findOrFail($id);
+        $supplier->delete();
+        return redirect()->route('suppliers.index');
+    }
 }
