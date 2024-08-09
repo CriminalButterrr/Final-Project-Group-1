@@ -15,7 +15,7 @@
     </style>
 </head>
 
-<body class=" font-sans antialiased dark:bg-black dark:text-white/50">
+<body class=" font-sans antialiased ">
     <div class="h-14 bg-gradient-to-r from-purple-500 to-pink-500">
         <img id="background" class="absolute left-0 top-0 inset-0 w-full h-full object-cover"
             src="{{ URL('images/background.png') }}" />
@@ -30,18 +30,21 @@
                         <nav class="-mx-3 flex flex-1 justify-end">
                             @auth
                                 <a href="{{ url('/dashboard') }}"
-                                    class="rounded-md px-3 py-2 text-black ring-1 ring-transparent transition hover:text-black/70 focus:outline-none focus-visible:ring-[#FF2D20] dark:text-white dark:hover:text-white/80 dark:focus-visible:ring-white">
+                                    class="rounded-md px-3 py-2 text-white/70 ring-1 ring-transparent transition hover:text-black/70 focus:outline-none focus-visible:ring-[#FF2D20] dark:text-white dark:hover:text-white/80 dark:focus-visible:ring-white">
                                     Dashboard
+                                </a>
+                                <a href="/products" class="rounded-md px-3 py-2 text-white/70 ring-1 ring-transparent transition hover:text-black/70 focus:outline-none focus-visible:ring-[#FF2D20] dark:text-white dark:hover:text-white/80 dark:focus-visible:ring-white">
+                                    Home
                                 </a>
                             @else
                                 <a href="{{ route('login') }}"
-                                    class="rounded-md px-3 py-2 text-black ring-1 ring-transparent transition hover:text-black/70 focus:outline-none focus-visible:ring-[#FF2D20] dark:text-white dark:hover:text-white/80 dark:focus-visible:ring-white">
+                                    class="rounded-md px-3 py-2 text-white/70 ring-1 ring-transparent transition hover:text-black/70 focus:outline-none focus-visible:ring-[#FF2D20] dark:text-white dark:hover:text-white/80 dark:focus-visible:ring-white">
                                     Log in
                                 </a>
 
                                 @if (Route::has('register'))
                                     <a href="{{ route('register') }}"
-                                        class="rounded-md px-3 py-2 text-black ring-1 ring-transparent transition hover:text-black/70 focus:outline-none focus-visible:ring-[#FF2D20] dark:text-white dark:hover:text-white/80 dark:focus-visible:ring-white">
+                                        class="rounded-md px-3 py-2 text-white/70 ring-1 ring-transparent transition hover:text-black/70 focus:outline-none focus-visible:ring-[#FF2D20] dark:text-white dark:hover:text-white/80 dark:focus-visible:ring-white">
                                         Register
                                     </a>
                                 @endif
@@ -86,12 +89,9 @@
                             <img src="{{URL('images/Delete.png')}}" alt="delete" class="w-1 h-1"/>
                             <span>DELETE: Delete - Delete or Remove Data</span>
                         </a>
-
-
                     </div>
                 </main>
-
-                <footer class="py-16 text-center text-sm text-black dark:text-white/70">
+                <footer class="py-16 text-center text-sm text-white">
                     Laravel v{{ Illuminate\Foundation\Application::VERSION }} (PHP v{{ PHP_VERSION }})
                 </footer>
             </div>
