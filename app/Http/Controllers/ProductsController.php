@@ -40,7 +40,7 @@ class ProductsController extends Controller
         Product::create($validatedData);
         error_log(json_encode($validatedData));
 
-        return redirect()->route('products');
+        return redirect()->route('products.index');
     }
 
     // Return a form to edit a record of a supplier
