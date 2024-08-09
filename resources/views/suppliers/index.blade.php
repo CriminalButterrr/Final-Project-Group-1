@@ -37,7 +37,7 @@
                                 <td class="whitespace-nowrap  px-6 py-4"><a href="suppliers/{{$supplier->id}}">{{$supplier->name}}</a></td>
                                 <td class="whitespace-nowrap  px-6 py-4">{{$supplier->email}}</td>
                                 <td class="whitespace-nowrap  px-6 py-4">{{$supplier->phone}}</td>
-                                <td class="whitespace-nowrap  px-6 py-4">{{$supplier->address}}</td>
+                                <td class="px-6 py-4">{{$supplier->address}}</td>
                             </tr>
                         @endforeach
                     </tbody>

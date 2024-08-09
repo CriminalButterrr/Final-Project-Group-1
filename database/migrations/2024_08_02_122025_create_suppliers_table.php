@@ -19,6 +19,12 @@ return new class extends Migration
             $table->string('address');
             $table->timestamps();
         });
+        DB::table('suppliers')->insert([
+            ['name' => 'Red Bull Racing', 'email' => 'info@redbullracing.com', 'phone' => '+44 (0)1908 279761', 'address' => 'Bradbourne Drive, Tilbrook, Milton Keynes, England'],
+            ['name' => 'Scuderia Ferrari', 'email' => 'biglietteriamef@ferrari.com', 'phone' => '+39 059 4397979', 'address' => 'Via Paolo Ferrari, 85, 41121 Modena, Italy'],
+            ['name' => 'Mercedes-AMG PETRONAS F1', 'email' => 'infof@mercedesamgf1.com ', 'phone' => '+44 1280 844000', 'address' => 'Operations Centre, Brackley NN13 7BD, United Kingdom'],
+            ['name' => 'WEVERSE COMPANY Inc.', 'email' => 'account@weverse.io ', 'phone' => '1544-0790', 'address' => '8th floor, Building C, 131 Bundang Naegok-ro, Bundang-gu, Seongnam-si, Gyeonggi-do'],
+        ]);
     }
 
     /**
