@@ -31,9 +31,9 @@
                         <th scope="col" class=" px-6 py-4">Price</th>
                         <th scope="col" class=" px-6 py-4">Supplier ID</th>
                     </tr>
-                    <tbody>
+                    <tbody >
                         @foreach ($products as $product)
-                            <tr class="border-b border-neutral-200 dark:border-white/10">
+                                <tr class="hover:bg-red-500 hover:bg-opacity-30 cursor-pointer" onclick="window.location.href='{{ route('products.edit', $product->id) }}'">
                                 <td class="whitespace-nowrap  px-6 py-4 font-medium">{{$product->id}}</td>
                                 <td class="whitespace-nowrap  px-6 py-4"><a href="products/{{$product->id}}">{{$product->name}}</a></td>
                                 <td class="whitespace-nowrap  px-6 py-4">{{$product->sku}}</td>
@@ -44,7 +44,12 @@
                         @endforeach
                     </tbody>
                 </table>
+                
             </div>
+            
+        </div>
+        <div class="text-center text-white/50"> 
+        <p>click the product you want to edit</p>
         </div>
     </div>
     

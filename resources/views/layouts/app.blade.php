@@ -14,12 +14,10 @@
         <!-- Scripts -->
         @vite(['resources/css/app.css', 'resources/js/app.js'])
     </head>
-    <body class="font-sans antialiased">
-
-<!-- DASHBOARD BACKGROUND --><div class="min-h-screen bg-gray-900 dark:bg-gray-900">
+    <body class="font-sans antialiased ">
+    <div class="min-h-screen bg-gradient-to-b from-slate-900 via-zinc-800 to-red-900">
             @include('layouts.navigation')
 
-            
             <!-- Page Heading -->
             @isset($header)
                 <header class="bg-white dark:bg-gray-800 shadow">
