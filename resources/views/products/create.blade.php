@@ -53,9 +53,11 @@
 
     
         <div class="flex items-center justify-end mt-4">
-            <x-secondary-button class="ms-4">
-                {{ __('Cancel') }}
-            </x-primary-button>
+            <a href="{{ route('products.index') }}">
+                <x-secondary-button class="ms-4">
+                    {{ __('Cancel') }}
+                </x-primary-button>
+            </a>
 
             <x-primary-button class="ms-4">
                 {{ __('Create') }}
