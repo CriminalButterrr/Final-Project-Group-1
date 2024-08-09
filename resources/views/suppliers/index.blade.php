@@ -5,7 +5,20 @@
         </h2>
     </x-slot>
 
-    <div class="py-12">
+    <div class="pt-4">
+        <div class="max-w-7xl mx-auto sm:px-6 lg:px-8">
+            <div class="flex justify-end">
+                <a href="{{ route('suppliers.create') }}" class="inline-flex items-center px-4 py-2 bg-blue-500 text-white font-semibold rounded-md shadow-sm hover:bg-blue-600 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5 mr-2" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M12 5v14m7-7H5"></path>
+                    </svg>
+                    Add supplier
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <div class="py-4">
         <div class="max-w-7xl mx-auto sm:px-6 lg:px-8">
             <div class="bg-white dark:bg-gray-800 overflow-hidden shadow-sm sm:rounded-lg">
                 <table class="min-w-full text-center text-sm font-light text-surface dark:text-white">

@@ -1,4 +1,14 @@
 <x-guest-layout>
+    <header class="text-center">
+        <h2 class="text-lg font-medium text-gray-900 dark:text-gray-100">
+            Add Product
+        </h2>
+
+        <p class="mt-1 mb-8 text-sm text-gray-600 dark:text-gray-400">
+            Add product's detail.
+        </p>
+    </header>
+
     <form method="POST" action="/products">
         @csrf
 

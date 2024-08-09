@@ -23,7 +23,7 @@ Route::get('/products', [ProductsController::class, 'index'])->name('products.in
 Route::get('/products/create', [ProductsController::class, 'create'])->name('products.create');
 Route::post('/products', [ProductsController::class, 'store'])->name('products.store');
 Route::get('/products/{id}', [ProductsController::class, 'show'])->name('products.show');
-Route::get('/products/{id}/edit', [ProductsController::class, 'edit']);('products.edit');
+Route::get('/products/{id}/edit', [ProductsController::class, 'edit'])->name('products.edit');
 Route::patch('/products/{id}', [ProductsController::class, 'update'])->name('products.update');
 
 Route::get('/suppliers', [SuppliersController::class, 'index'])->name('suppliers.index');

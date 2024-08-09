@@ -1,4 +1,14 @@
 <x-guest-layout>
+    <header class="text-center">
+        <h2 class="text-lg font-medium text-gray-900 dark:text-gray-100">
+            Add Supplier
+        </h2>
+
+        <p class="mt-1 mb-8 text-sm text-gray-600 dark:text-gray-400">
+            Add supplier's profile information and email address.
+        </p>
+    </header>
+
     <form method="POST" action="/suppliers">
         @csrf
 
