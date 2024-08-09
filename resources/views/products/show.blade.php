@@ -37,7 +37,7 @@
                                     </div>
                                     <div class="mt-6 flex space-x-4">
                                         <a href="{{ route('products.edit', $products->id) }}" >
-                                            <x-secondary-button class=" text-white bg-yellow-500 hover:bg-yellow-400 ">
+                                            <x-secondary-button class=" text-white bg-yellow-500 hover:bg-yellow-400 dark:bg-yellow-500 dark:text-white focus:ring-yellow-500">
                                                 {{ __('Edit Product') }}
                                             </x-primary-button>
                                         </a>
